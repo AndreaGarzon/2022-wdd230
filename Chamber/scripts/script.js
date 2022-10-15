@@ -25,3 +25,11 @@ const naveg = document.querySelector(".nav-space");
 hambutton.addEventListener('click', () => {mainnav.classList.toggle("responsive")}, false);
 hambutton.addEventListener('click', () => {naveg.classList.toggle("wider")}, false);
 
+if (weekday == "Monday" | weekday == "Tuesday") {
+    const header = document.querySelector("header");
+    const alert = document.createElement("p");
+    alert.textContent = "🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.";
+    alert.className = "alert";
+    header.appendChild(alert);
+}
+
