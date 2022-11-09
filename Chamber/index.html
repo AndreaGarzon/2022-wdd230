@@ -15,10 +15,10 @@
     </head>
     <body>
         <header>
-            <img class="headerlogo" src="images/Logo.png" alt="Logo of Dulima Chamber of Commerce">
+            <img class="headerlogo" src="images/Logo.webp" alt="Logo of Dulima Chamber of Commerce">
             <h1>Dulima Chamber of Commerce</h1>
-            <img class="media" id="logo-ig" src="images/instagram.png" alt="Logo of instagram">
-            <img class="media" id="logo-fb" src="images/facebook.png" alt="Logo of facebook">
+            <img class="media" id="logo-ig" src="images/instagram.webp" alt="Logo of instagram">
+            <img class="media" id="logo-fb" src="images/facebook.webp" alt="Logo of facebook">
             <nav class="nav-space">
                 <ul class="navigation">
                     <li><a class="ham" href="#"></a><Menu></Menu></li>
@@ -35,7 +35,12 @@
         <main>
             <div class="box" id="hero">
                 <h2 class="up">Join us</h2>
-                <img src="images/Dulima.jpg" alt="Dulima Cacica's Picture">
+                <picture>
+                    <source media="(max-width:32.4em" srcset="images/DulimaSmall.webp">
+                    <source media="(max-width:49.9em" srcset="images/DulimaMedium.webp"> 
+                    <source media="(min-width:50em" srcset="images/DulimaLarge.webp">
+                    <img src="images/DulimaLarge.webp" alt="Dulima Cacica's Picture">
+                </picture>
             </div>
             <div class="box" id="events">
                 <img class="event" id="gift" src="images/gift.png" alt="A gift image">
@@ -48,7 +53,9 @@
                 <h2>Weather</h2>
                     <div class="temperature">
                         <img class="sun" src="images/sunny.jpg" alt="an animated sun">
-                        <h2>32°C</h2>
+                        <p id="weatherText"><span id="temp">28</span>°C</p>
+                        <p><span id="wSpeed">4.5</span>kph</p>
+                        <p><span id="wChill"></span>kph</p>
                     </div>
                     <div>Sunny</div>
                     <div> 28°C / 35°C</div>
@@ -75,7 +82,7 @@
         </main>
         <footer> 
             <div class="footer-logo">
-                <img src="images/Logo.png" alt="Logo of Dulima Chamber of Commerce">
+                <img src="images/Logo.webp" alt="Logo of Dulima Chamber of Commerce">
             </div>
             <div class="footer-l">
                 <h2>Dulima Chamber of Commerce</h2>
@@ -95,6 +102,7 @@
             </div>
         </footer>
         <script src="scripts/script.js"></script>
+        <script src="scripts/windchill.js"></script>
         
     </body>
 

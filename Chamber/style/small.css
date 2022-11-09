@@ -223,6 +223,10 @@ header > p {
     text-transform: capitalize;
 }
 
+.weather-card p{
+    color: var(--Titles);
+}
+
 .temperature {
     display: flex;
     align-content: center;
